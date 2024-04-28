@@ -1,0 +1,36 @@
+.home-pages{
+    width: 100%;
+}
+.home-pages .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-left{
+    margin-top: 100px;
+}
+.home-title{
+    padding: 20px 0;
+}
+.home-text{
+    width: 500px;
+   padding: 20px 0;
+}
+.home-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.button-subtitle{
+    display: flex;
+flex-direction: column;
+}
+.button-anchor{
+color: #3D3B69;
+padding-top: 3px;
+}
+.home-right{
+    width: 700px;
+    height: 645px;
+}
