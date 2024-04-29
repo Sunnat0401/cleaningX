@@ -1,0 +1,30 @@
+.Articles{
+    margin: 30px;
+    padding: 10px 0;
+}
+.Articles-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Articles-btns{
+    display: flex;
+    gap: 50px;
+}
+.Articles-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+
+
+}
+.Article-card{
+    margin: 20px 0;
+    width: 596px;
+    height: 630px;
+}
+.Articles-img{
+    width: 596px;
+height: 366px;
+
+}

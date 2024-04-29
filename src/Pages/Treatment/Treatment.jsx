@@ -8,7 +8,7 @@ const Treatment = () => {
             <img src={group1} alt="Treatment" className="Treatment-img" />
             <div className="Treatment-right">
                        <h5 className="Treatment-title">Covid-19 sanitization</h5>
-                       <h1 className='Treatment-subtitle'>Covid-19 sanitization</h1>
+                       <h1 className='Treatment-subtitle'>We follow guidelines to keep you safe from the COVID-19 virus</h1>
                        <p className="Treatment-text">
                        Lobortis mattis odio leo eget mauris met aliquet semper molestie sollicitudin congue massa mauris lectus.
                        </p>
