@@ -1,0 +1,23 @@
+
+
+
+
+/* Treatment btn */
+.Treatment-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Treatment-info{
+    display: flex;
+flex-direction: column;
+}
+.Treatment-anchor{
+color: #3D3B69;
+padding-top: 3px;
+}
+/* .home-right{
+    width: 700px;
+    height: 645px;
+} */

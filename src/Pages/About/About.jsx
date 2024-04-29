@@ -1,71 +1,58 @@
-// import { useState , useEffect} from 'react';
-// import './About.css'
-// const About = () => {
-//     const [data, setData] = useState([]);
-//     const [loading, setLoading] = useState(true);
+import Button from '../../Components/Button/Button';
+import OutlineButton from '../../Components/OutlineButton/OutlineButton';
+import './About.css'
+import { useEffect, useState } from "react";
 
-import { useEffect } from "react";
-import { useState } from "react";
-
-  
-//     useEffect(() => {
-//       fetch("https://newsapi.org/4265d9a047b0459ebb6406af9fadedd8")
-//         .then((res) => res.json())
-//         .then((items) => { 
-//             console.log(items);
-//         })
-//         .catch((error) => {
-//           console.error("Error fetching data:", error);
-//         });
-//     }, []);
-//   return (
-//    <h1>ass</h1>
-//   )
-// }
-
-// export default About
 function About() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
-      fetch("https://newsapi.org/v2/everything?q=bitcoin&apiKey=4265d9a047b0459ebb6406af9fadedd8")
-        .then((res) => res.json())
-        .then((items) => {
-            console.log(items);
-            const threeItems = items?.articles.slice(0, 3);
-            console.log(threeItems);
-          setData(threeItems?.articles);
-        //   setLoading(false);
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-        //   setLoading(false);
-        });
+        fetch("https://newsapi.org/v2/everything?q=bitcoin&apiKey=4265d9a047b0459ebb6406af9fadedd8")
+            .then((res) => res.json())
+            .then((items) => {
+                const threeItems = items?.articles.slice(0,3);
+                setData(threeItems);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+                setLoading(false);
+            });
     }, []);
-    // console.log(i18n);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+    if (!data || data.length === 0) {
+        return <p>there is an error: information is not coming from the api</p>;
+    }
+
     return (
-        <div className="abot">
-      <div className='container'>
-        <h1 className="about-title">About Us</h1>
-          <h3 className="about-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquam nihil cumque doloribus? Eum laborum quae mollitia molestiae repellat dolore sunt labore, alias dignissimos consequuntur ab vero neque dolores nam?</h3>
-        { 
-          data.map((threeItems, i) => (
-            <div key={i} className='card'>
-              <img className='card-img' src={threeItems?.urlToImage} alt={threeItems?.title} />
-              <h5 className='card-title'>
-                {threeItems?.author}
-              </h5>
-              <p>{threeItems?.title}</p>
-            </div>
-          ))
-        }
-      </div>
-
-        </div>
+      <div className='about'>
+          <div className="container">
+                  
+          <div className="about-title">
+          <h1 >About</h1>
+          <h4 className='about-subtitle'>Sagittis nibh scelerisque vitae eget vulputate sem elementum sed neque nisi felis non ultrices massa id egestas quam velit pretium nu.</h4>
+          </div>
+          <div className="about-cards">
+            {data.map((article, i) => (
+                <div key={i}>
+                    <img className="about-img" src={article.urlToImage} alt={article.title} />
+                    <h3 className="about-text">{article.author}</h3>
+                    <p className="about-info">{article.title}</p>
+                </div>
+            ))}
          
+          </div>
+          <div className="about-btns">
+              <Button/>   <OutlineButton/>
+            </div>
+       
+          </div>
+       </div>
     );
-  }
-  
-
+}
 
 export default About;

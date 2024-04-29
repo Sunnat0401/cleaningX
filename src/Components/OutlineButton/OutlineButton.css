@@ -1,0 +1,14 @@
+.about-btn{
+    width:160px;
+    height: 40px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    transition: all 0.8s ease;
+}
+.about-btn:hover{
+  background-color:   #0075FF;
+  color: #fff;
+}
+.btn-link{
+    color: #fff;
+}
