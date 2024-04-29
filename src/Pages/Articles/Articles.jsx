@@ -47,6 +47,7 @@ function Articles() {
                     <h3 className="Articles-text">{article.author}</h3>
                     <p className="Articles-info">{article.title}</p>
                 </div>
+              
             ))}
          
           </div>
