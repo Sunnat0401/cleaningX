@@ -2,10 +2,10 @@ import { navbar1, phone } from '../../assets'
 import Button from '../../Components/Button/Button'
 import Navbar from '../../Components/Navbar/Navbar'
 import './HomePages.css'
-const HomePages = () => {
+const HomePages = ({changeLang}) => {
   return (
     <div className='home-pages'>
-        <Navbar/>
+        <Navbar changeLang={changeLang}/>
         <div className="container">
             <div className="home-left">
                 <h1 className="home-title">Quality cleaning for your home</h1>

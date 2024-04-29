@@ -15,8 +15,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between ;
-
-
 }
 .Article-card{
     margin: 20px 0;
@@ -27,6 +25,10 @@
 .Articles-img{
     width: 100%;
     border-radius: 10px;
+    transition: all 0.7s ease;
+}
+.Articles-img:hover{
+    transform: scale(1.02);
 }
 .Articles-text , .Articles-info{
     text-align: center;
