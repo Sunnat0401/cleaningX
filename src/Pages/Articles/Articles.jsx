@@ -5,7 +5,7 @@ import Button from "../../Components/Button/Button";
 function Articles() {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
-
+   ffasjdhfsajdh
     useEffect(() => {
         fetch("https://newsapi.org/v2/everything?q=bitcoin&apiKey=4265d9a047b0459ebb6406af9fadedd8")
             .then((res) => res.json())
