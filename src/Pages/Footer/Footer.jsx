@@ -1,14 +1,16 @@
+import { useTranslation } from 'react-i18next'
 import { logo } from '../../assets'
 import Button from '../../Components/Button/Button'
 import './Footer.css'
 const Footer = () => {
+    const {t} = useTranslation()
   return (
     <div className='footer'>
         <div className="container">
             <div className="footer-top">
                 <div className="footer-info">
-                    <h4 className="footer-title">Quality cleaning for your home</h4>
-                    <p className="footer-text">Lorem ipsum dolor sit amet cteturdo adipiscing elit, sed do eiusmo.</p>
+                    <h4 className="footer-title">{t("footer1")}</h4>
+                    <p className="footer-text">{t("footer2")}</p>
                 </div>
                 <div className="footer-connect">
                     <h5 className="footer-subtitle">

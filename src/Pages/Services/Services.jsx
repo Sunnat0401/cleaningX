@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import OutlineButton from "../../Components/OutlineButton/OutlineButton";
 import './Services.css'
+import { useTranslation } from "react-i18next";
 function Services() {
+    const {t} = useTranslation()
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -21,10 +23,12 @@ function Services() {
     }, []);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <div className="wrapper">
+             <div className="loader"></div>
+        </div>
     }
     if (!items || items.length === 0) {
-        return <p>there is an error: information is not coming from the api</p>;
+        return <p className="loader-text">Error: information is not coming from the api</p>;
     }
 
     return (
@@ -32,7 +36,7 @@ function Services() {
           <div className="container">
                   
           <div className="service-top">
-          <h1 >Our Services</h1>
+          <h1 >{t("service1")}</h1>
         <OutlineButton/>
           </div>
           <div className="services-cards">

@@ -13,7 +13,7 @@ i18n
 // i18next react bilan configurstsiya qilib beradi  (bog;lab beradi)
 .use(initReactI18next)
 .init({
-    fallbackLng:'uz',
+    fallbackLng:'en',
     lng:language,
     debug:true,
     resources:{

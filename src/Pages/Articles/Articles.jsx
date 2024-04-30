@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import './Articles.css'
 import OutlineButton from "../../Components/OutlineButton/OutlineButton";
 import Button from "../../Components/Button/Button";
+import { useTranslation } from "react-i18next";
 function Articles() {
+    const {t} = useTranslation()
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -21,10 +23,12 @@ function Articles() {
     }, []);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <div className="wrapper">
+            <div className="loader"></div>
+        </div>
     }
     if (!items || items.length === 0) {
-        return <p>there is an error: information is not coming from the api</p>;
+        return <p className="loader-text">Error: information is not coming from the api</p>;
     }
 
     return (
@@ -32,7 +36,7 @@ function Articles() {
           <div className="container">
                   
           <div className="Articles-top">
-          <h1 >Our Articles</h1>
+          <h1 >{t("articles")}</h1>
       <div className="Articles-btns">
         <Button/>
       <OutlineButton/>

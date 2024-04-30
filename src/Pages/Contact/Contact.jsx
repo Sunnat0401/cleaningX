@@ -3,8 +3,9 @@ import { phone } from '../../assets'
 import Button from '../../Components/Button/Button'
 import './Contact.css'
 import { useState } from 'react'
-
+import { useTranslation } from 'react-i18next'
 const Contact = () => {
+  const {t} = useTranslation()
     const [loading , setLoading] = useState(false)
 const SendMessage = ( event) =>{
   setLoading(true)
@@ -42,42 +43,42 @@ const SendMessage = ( event) =>{
     <div className='contact'>
         <div className="container">
             <div className="contact-left">
-                <h1 className="contact-title">Contact Us</h1>
-                <p className="contact-text">In dignissim euismod pretium amet enim a eu nam ut urna accumsan pellentesque lacus duis pharetra eutortor.</p>
+                <h1 className="contact-title">{t("contact1")}</h1>
+                <p className="contact-text">{t("contact2")}</p>
                 <div className="contact-info">
                     <img src={phone} alt="phone" className='contact-img' />
                     <p className="contact-information">
-                        class us now <br />
+                        {t("home3")} <br />
                         <a href="#" className="contact-anchor"> +998901249484</a>
                     </p>
                 </div>
-                    <h4 className="contact-subtitle">Not convinced yet?</h4>
-                    <p className="contact-lorem">Massa bibendum consectetur maurisid gravida purus, dolor dui amet morbi non nunc urna purus diam.</p>
-                    <button className="contact-btn"><a href="$" className="contact-link">Browse our packages</a></button>
+                    <h4 className="contact-subtitle">{t("contact3")}</h4>
+                    <p className="contact-lorem">{t("contact4")}</p>
+                    <button className="contact-btn" ><a href="" className="contact-link">{t("contact5")}</a></button>
             </div>
             <div className="contact-right">
                 <form action=""  onSubmit={SendMessage} id='myForm'>
                   <div className="contact-form"> 
                   <div className="form-left">
-                        <label htmlFor="">Full name</label>
+                        <label htmlFor="">{t("form1")}</label>
                         <input className='form-input' type="text" id='fullName' />
-                        <label htmlFor="">Adress</label>
+                        <label htmlFor="">{t("form2")}</label>
                         <input className='form-input' type="text" id='adress'/>
-                        <label htmlFor="">Request Services</label>
+                        <label htmlFor="">{t("form3")}</label>
                         <input className='form-input' type="text" id='request'/>
                      </div>
                      <div className="form-right">
-                     <label htmlFor="phoneNumber">Phone Number</label>
+                     <label htmlFor="phoneNumber">{t("form4")}</label>
 <input id="phoneNumber" className="form-input" placeholder='+ 998 90 124 94 84 ' type="text"  />
 
-                        <label htmlFor="">Email</label>
+                        <label htmlFor="">{t("form5")}</label>
                         <input className='form-input' type="email"  id='email'/>
-                        <label htmlFor="">Day of service</label>
+                        <label htmlFor="">{t("form6")}</label>
                         <input className='form-input' type="text"  id='days'/>
                      </div>
                   </div>
                    <div className="form-bottom form-button ">
-                              <label htmlFor="">Add a note</label>
+                              <label htmlFor="">{t("form7")}</label>
                              <textarea className='form-textarea' name="" id="addNote" cols="20" rows="5"></textarea>
                                  <Button/>
                     </div>

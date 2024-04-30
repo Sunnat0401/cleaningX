@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import Button from '../../Components/Button/Button';
 import OutlineButton from '../../Components/OutlineButton/OutlineButton';
 import './About.css'
 import { useEffect, useState } from "react";
 
 function About() {
+      const { t, i18n } = useTranslation()
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -22,10 +24,12 @@ function About() {
     }, []);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <div className="wrapper">
+            <div class="loader"></div> 
+        </div>
     }
     if (!data || data.length === 0) {
-        return <p>there is an error: information is not coming from the api</p>;
+        return <p className='loader-text'>Error: information is not coming from the api</p>;
     }
 
     return (
@@ -33,8 +37,8 @@ function About() {
           <div className="container">
                   
           <div className="about-title">
-          <h1 >About</h1>
-          <h4 className='about-subtitle'>Sagittis nibh scelerisque vitae eget vulputate sem elementum sed neque nisi felis non ultrices massa id egestas quam velit pretium nu.</h4>
+          <h1 >{t("about1")}</h1>
+          <h4 className='about-subtitle'>{t("about2")}</h4>
           </div>
           <div className="about-cards">
             {data.map((article, i) => (

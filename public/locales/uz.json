@@ -4,6 +4,34 @@
         "service": "Xizmatlar",
         "articles": "Maqolalar",
         "contact": "Aloqa",
-        "button": " Boshlash"
+        "button": " Boshlash",
+        "home1": "Uy uchun sifatli tozalash",
+        "home2": "Lorem ipsum dolor sit amet erat iusto vitae officiis possimus fugit beatae. Animi culpa magnam corrupti subcipit totam error labore eaque quo quo quibusdam beatae aut a dicta, est accusantium facilis no quia? Itaque eligendi, in nobis sed doloribus va voluptates repellat, suscipit doore, impedit ullam veniam eum officiis. Illum corporis dolor, dignissimos eveniet facere eaque ea accusamus, optio, dicta adipisci perferendis harum! Quos.",
+        "home3": "Hoziroq qo'ng'iroq qiling",
+        "about1": "Biz haqimizda",
+        "about2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis, justo in molestie volutpat, libero mauris eleifend nisi, vel volutpat est metus eget elit.",
+         "outlineBtn" :"Xizmatlarni o'rganing",
+         "service1" :"Bizning xizmat",
+         "treatment1": "Kovid-19 dezinfektsiya",
+         "treatment2": "Biz sizni Kovid-19 virusidan himoya qilish uchun qo'llanmalarga rioya qilamiz",
+         "treatment3": "Lobortis mattis odio leo eget mauris met aliquet semper molestie sollicitudin congue massa mauris lectus.",
+         "contact1": "Biz bilan bog'laning",
+         "contact2": "Dignissim euismod pretiumda. Amet enim a eu nam ut urna accumsan pellentesque lacus. Duis pharetra eutortor.",
+         "contact3": "Hali ham ikkalamadingizmi?",
+         "contact4": "Massa bibendum consectetur mauris. Id gravida purus, dolor dui amet morbi non nunc urna purus diam.",
+         "contact5": "Bizning takliflarni ko'ring",
+         "form1": "To'liq ism",
+         "form2": "Manzil",
+         "form3": "So'ralgan xizmat",
+         "form4": "Telefon raqami",
+         "form5": "Elektron pochta",
+         "form6": "Xizmat kuni",
+         "form7": "Eslatma kuni",
+         "footer1": "Uy uchun sifatli tozalash",
+         "footer2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+
+
+
+    
   }
     
