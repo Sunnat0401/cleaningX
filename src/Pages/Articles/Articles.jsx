@@ -5,12 +5,11 @@ import Button from "../../Components/Button/Button";
 function Articles() {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
-   ffasjdhfsajdh
     useEffect(() => {
         fetch("https://newsapi.org/v2/everything?q=bitcoin&apiKey=4265d9a047b0459ebb6406af9fadedd8")
             .then((res) => res.json())
             .then((items) => {
-                const info = items?.articles.slice(19, 21);
+                const info = items?.articles.slice(12,14);
                 console.log(info);
                 setItems(info);
                 setLoading(false);

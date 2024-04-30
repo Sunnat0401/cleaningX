@@ -1,6 +1,6 @@
 .about-btn{
-    width:160px;
-    height: 40px;
+  width: 150px;
+  height: 45px;
     border: 2px solid gray;
     border-radius: 10px;
     transition: all 0.8s ease;

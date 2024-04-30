@@ -8,34 +8,10 @@ import Services from './Pages/Services/Services'
 import Treatment from './Pages/Treatment/Treatment'
 import React from "react";
 import { createRoot } from 'react-dom/client';
-import i18n, { changeLanguage } from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
-import TranslateEn from './locale/translateEn'
-import TranslateUz from './locale/translateUz'
-
-i18n
-  .use(initReactI18next) 
-  .init({
-    resources: {
-      en: {    translation: TranslateEn  },
-      uz: {    translation: TranslateUz  }
-    },
-    lng: "uz", 
-    fallbackLng: "en",
-    interpolation: {
-      escapeValue: false
-    }
-  });
-
-
-
 function App() {
-  const changeLang =(value) =>{
-   changeLanguage(value)
-  }
   return (
     <>
-       <HomePages changeLang={changeLang}/>
+       <HomePages/>
        <About/>
        <Services/>
        <Treatment/>

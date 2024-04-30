@@ -1,8 +1,43 @@
+import axios from 'axios'
 import { phone } from '../../assets'
 import Button from '../../Components/Button/Button'
 import './Contact.css'
+import { useState } from 'react'
 
 const Contact = () => {
+    const [loading , setLoading] = useState(false)
+const SendMessage = ( event) =>{
+  setLoading(true)
+  event.preventDefault();
+  const token = "7150671992:AAEZ5SYAKAlmx_bf9Poj9b6j3wVP6n1tvsg"
+  const chat_id =6856618212 ;
+  const url = ` https://api.telegram.org/bot${token}/sendMessage`
+  const name =document.getElementById("fullName").value
+  const adress =document.getElementById("adress").value
+  const request =document.getElementById("request").value
+  const phoneNumber =document.getElementById("phoneNumber").value
+  const email =document.getElementById("email").value
+  const days =document.getElementById("days").value
+  const addNote =document.getElementById("addNote").value
+  const sendMessageContent = `FullName: ${name} \n adress: ${adress} \n request :${request} \nphoneNumber : ${phoneNumber} \n email: ${email} \n days : ${days} addNote : ${addNote} `
+  axios({
+    url : url ,
+    method: 'POST',
+    data: {
+      "chat_id" : chat_id,
+      "text":sendMessageContent
+    }
+  }).then((res) => {
+    if(name.length > 0 && adress.length > 0 && request.length>0 && phoneNumber.length>0 && email.length>0 && days.length > 0 && addNote.length>0){
+        alert("Muvaffaqiyatli   ✔")
+         document.getElementById("myForm").reset()
+    }else{
+        alert("  Malumotni tog'ri kiriting  ❌")
+    }
+  }).catch((err) => {
+    console.log("yuborishda xatolik", err)
+  }).finally(()=>setLoading(false))
+}
   return (
     <div className='contact'>
         <div className="container">
@@ -21,32 +56,32 @@ const Contact = () => {
                     <button className="contact-btn"><a href="$" className="contact-link">Browse our packages</a></button>
             </div>
             <div className="contact-right">
-                <form action="" className="contact-form">
-                     <div className="form-left">
+                <form action=""  onSubmit={SendMessage} id='myForm'>
+                  <div className="contact-form"> 
+                  <div className="form-left">
                         <label htmlFor="">Full name</label>
-                        <input className='form-input' type="text" />
+                        <input className='form-input' type="text" id='fullName' />
                         <label htmlFor="">Adress</label>
-                        <input className='form-input' type="text" />
+                        <input className='form-input' type="text" id='adress'/>
                         <label htmlFor="">Request Services</label>
-                        <input className='form-input' type="text" />
+                        <input className='form-input' type="text" id='request'/>
                      </div>
                      <div className="form-right">
                      <label htmlFor="phoneNumber">Phone Number</label>
 <input id="phoneNumber" className="form-input" placeholder='+ 998 90 124 94 84 ' type="text"  />
 
                         <label htmlFor="">Email</label>
-                        <input className='form-input' type="email" />
+                        <input className='form-input' type="email"  id='email'/>
                         <label htmlFor="">Day of service</label>
-                        <input className='form-input' type="text" />
+                        <input className='form-input' type="text"  id='days'/>
                      </div>
-                </form>
-                   <div className="form-bottom">
-                      <form action="" className='form-button'>
+                  </div>
+                   <div className="form-bottom form-button ">
                               <label htmlFor="">Add a note</label>
-                             <textarea className='form-textarea' name="" id="" cols="20" rows="5"></textarea>
-                    </form>
+                             <textarea className='form-textarea' name="" id="addNote" cols="20" rows="5"></textarea>
                                  <Button/>
                     </div>
+                </form>
             </div>
         </div>
     </div>

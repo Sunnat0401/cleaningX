@@ -1,14 +1,15 @@
 .btn{
-    width:160px;
-    height: 40px;
+  width: 150px;
+height: 45px;
+border-radius: 14px 0px 0px 0px;
+    /* width:160px;
+    height: 40px; */
     border: 2px solid gray;
     border-radius: 10px;
     background-color: #0075FF;
     transition: all 0.4s ease;
+    color: #fff;
 }
 .btn:hover{
   background-color:  #0c59b0;
-}
-.btn-link{
-    color: #fff;
 }

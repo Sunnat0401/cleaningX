@@ -18,12 +18,11 @@
 }
 .Article-card{
     margin: 20px 0;
-    width: 650px;
-    height: 450px;
-   
+    width: 500px;
+    height: 370px;
 }
 .Articles-img{
-    width: 100%;
+    width:  100%;
     border-radius: 10px;
     transition: all 0.7s ease;
 }
