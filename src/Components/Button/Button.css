@@ -13,3 +13,9 @@ border-radius: 14px 0px 0px 0px;
 .btn:hover{
   background-color:  #0c59b0;
 }
+@media screen and (max-width: 1050px) {
+  .btn{
+    width: 140px;
+  height: 45px;
+  }
+}
