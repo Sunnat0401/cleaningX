@@ -42,7 +42,6 @@ padding: 20px 0;
     flex-direction: column;
     justify-content: center;
 }
-
 /* Treatment btn */
 .Treatment-button{
     width: 100%;
@@ -63,7 +62,115 @@ color: #fff;
 padding-top: 3px;
 font-size: 26px;
 }
-/* .home-right{
-    width: 700px;
-    height: 645px;
-} */
+@media screen and (max-width: 1200px) {
+    .Treatment{
+        margin: 10px 0;
+    }
+    .Treatment .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 20px 0;
+        border-radius: 20px;
+    }
+    .Treatment-img{
+        width: 700px;
+    }
+    }
+  
+@media screen and (max-width: 750px) {
+    .Treatment-img{
+        width: 550px;
+    }
+    .Treatment-title{
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    .Treatment-button{
+        justify-content: space-between;
+    }
+    .Treatment-right{
+        width:550px;
+    }
+    .Treatment-subtitle{
+        font-size: 32px;
+        font-weight: 400;
+    }
+    .Treatment-button{
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 597px) {
+    .Treatment-img{
+        width: 450px;
+        height: 450px;
+    }
+    .Treatment-right{
+        width:450px;
+    }
+    .Treatment-anchor{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 490px) {
+    .Treatment-img{
+        width: 350px;
+        height: 350px;
+    }
+    .Treatment-right{
+        width:350px;
+    }
+    .Treatment-title{
+    padding: 10px 0;
+    font-size: 16px;
+}
+.Treatment-subtitle{
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+.Treatment-text{
+font-size: 18px;
+}
+.Treatment-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.Treatment-image{
+    width: 50px;
+    height: 50px;
+}
+.Treatment-anchor{
+    font-size: 16px;
+}
+}
+@media screen and (max-width: 390px) {
+    .Treatment-img{
+        width: 265px;
+        height: 265px;
+    }
+    .Treatment-right{
+        width:265px;
+    }
+    .Treatment-title{
+    padding: 5px 0;
+}
+.Treatment-subtitle{
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 550;
+}
+.Treatment-text{
+font-size: 16px;
+}
+.Treatment-image{
+    width: 40px;
+    height: 40px;
+}
+.Treatment-anchor{
+    font-size: 14px;
+}
+}

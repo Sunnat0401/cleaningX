@@ -37,7 +37,7 @@ function Services() {
                   
           <div className="service-top">
           <h1 >{t("service1")}</h1>
-        <OutlineButton/>
+     <span className="service-btn">    <OutlineButton/></span>
           </div>
           <div className="services-cards">
             {items.map((article, i) => (
