@@ -91,3 +91,120 @@ padding: 20px;
   outline: none;
   padding: 10px;
 }
+@media screen and (max-width:980px ){
+    .contact .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+     
+    }
+    .contact-left{
+        width: 700px;
+       padding: 40px 15px;
+    }
+    .contact-title{
+       padding: 15px 0;
+    }
+    .contact-information{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 300px;
+    }
+    .contact-img{
+        width: 70px;
+        height: 70px;
+    }
+    /* contact-right */
+    
+    .contact-right{
+            width: 700px;
+            height: 550px;
+    }
+    .form-input{
+        width: 200px;
+    height: 50px;
+    }
+}
+@media screen and (max-width:760px ){
+    .contact-left{
+        width: 600px;
+       padding: 20px 15px;
+    }
+    .contact-information{
+        gap: 160px;
+    }
+    .contact-img{
+        width:60px;
+        height: 60px;
+    }
+    
+    .contact-right{
+            width: 600px;
+            height: 550px;
+    }
+    .form-input{
+        width: 190px;
+    height: 50px;
+    }
+}
+@media screen and (max-width:600px ){
+    .contact-left{
+        width: 500px;
+       padding: 10px 15px;
+    }
+    .contact-information{
+        gap: 70px;
+    }
+    .contact-right{
+        margin-top: -100px;
+            width: 500px;
+            height: 600px;
+    }
+    .form-input{
+        width: 160px;
+      height: 50px;
+    }
+}
+@media screen and (max-width:480px ){
+    .contact-left{
+        width: 400px;
+        padding: 10px 15px;
+        margin: 0;
+    }
+    .contact-information{
+        gap: 40px;
+    }
+    .contact-right{
+        margin-top: -70px;
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+    }
+    .form-input{
+        width: 130px;
+      height: 30px;
+    }
+}
+@media screen and (max-width:430px ){
+    .contact-left{
+        width: 390px;
+        padding: 10px;
+        margin: 0;
+    }
+    .contact-information{
+        gap: 40px;
+    }
+    .contact-right{
+        padding: 10px ;
+        margin-top: -70px;
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+    }
+    .form-input{
+        width: 130px;
+      height: 30px;
+    }
+}

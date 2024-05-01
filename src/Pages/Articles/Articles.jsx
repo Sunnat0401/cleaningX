@@ -38,8 +38,8 @@ function Articles() {
           <div className="Articles-top">
           <h1 >{t("articles")}</h1>
       <div className="Articles-btns">
-        <Button/>
-      <OutlineButton/>
+     <span  className="our-btns">   <Button/></span>
+    <span className="our-btns">      <OutlineButton/></span>
 
       </div>
           </div>
