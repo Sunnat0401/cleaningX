@@ -58,3 +58,100 @@ color: #0075FF;
 .footer-lists{
 color: #6E7191;
 }
+@media screen and (max-width : 1082px) {
+    .footer-top{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-top:30px ;
+    }
+
+}
+@media screen and (max-width : 956px) {
+    .footer-top{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin:30px 0;
+    }
+    .footer-info , .footer-connect , .footer-hours , .footer-data{
+        width: 700px;
+        height: 200px;
+        padding: 10px;
+        margin:4px 0;
+    }
+    .footer-bottom{
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+       gap: 20px;
+    }
+}
+@media screen and (max-width : 704px) {
+    .footer-info , .footer-connect , .footer-hours , .footer-data{
+        width: 550px;
+    }
+    .footer-lists{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width : 956px) {
+    .footer-top{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin:30px 0;
+    }
+    .footer-info , .footer-connect , .footer-hours , .footer-data{
+        width: 700px;
+        height: 200px;
+        padding: 10px;
+        margin:4px 0;
+    }
+    .footer-bottom{
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+       gap: 20px;
+    }
+}
+@media screen and (max-width : 704px) {
+    .footer-info , .footer-connect , .footer-hours , .footer-data{
+        width: 550px;
+    }
+}
+@media screen and (max-width : 560px) {
+    .footer-info , .footer-connect , .footer-hours , .footer-data{
+        width: 370px;
+        height: 200px;
+    }
+}
+@media screen and (max-width : 406px) {
+    .footer-info , .footer-connect , .footer-hours , .footer-data{
+        width: 300px;
+        height: 240px;
+    }
+    .footer-lists{
+        font-size: 14px;
+    }
+    .footer-images{
+        width: 140px;
+    }
+}
+@media screen and (max-width : 350px) {
+    .footer-info , .footer-connect , .footer-hours , .footer-data{
+        width: 250px;
+        height: 240px;
+    }
+    .footer-lists{
+        font-size: 14px;
+    }
+    .footer-images{
+        width: 130px;
+    }
+}

@@ -55,7 +55,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <img src={logo} alt="logo" />
+                <img src={logo} alt="logo"  className='footer-images'/>
                 <ul className="footer-lists">
                     <li className="footer-lists">
                     Copyright © Cleaning X | Designed byBRIX Templates - Powered by Webflow Licenses
