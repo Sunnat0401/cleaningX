@@ -3,33 +3,28 @@ import OutlineButton from "../../Components/OutlineButton/OutlineButton";
 import './Services.css'
 import { useTranslation } from "react-i18next";
 
-const API_KEY = "4265d9a047b0459ebb6406af9fadedd8";
-
 function Services() {
     const { t } = useTranslation();
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`https://newsapi.org/v2/everything?q=bitcoin&apiKey=${API_KEY}`)
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error('Network response was not ok');
+        const fetchData = async () => {
+            try {
+                const response = await fetch("/api/news");
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
                 }
-                return res.json();
-            })
-            .then((data) => {
-                if (!data || !data.articles || data.articles.length === 0) {
-                    throw new Error('No data found');
-                }
-                const info = data.articles.slice(0, 3); // Get the first 3 articles
-                setItems(info);
+                const data = await response.json();
+                setItems(data.articles);
                 setLoading(false);
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.error("Error fetching data:", error);
                 setLoading(false);
-            });
+            }
+        };
+
+        fetchData();
     }, []);
 
     if (loading) {
