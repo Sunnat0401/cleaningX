@@ -15,7 +15,7 @@ const Treatment = () => {
                     {t("treatment3")}
                        </p>
                        <div className="Treatment-button">
-                    <Button/> <img src={phone} alt=""  className='Treatment-image'/>
+          <a href="#contact">           <Button/></a> <img src={phone} alt=""  className='Treatment-image'/>
                     <p className="Treatment-info">
                         {t("home3")} <br />
                         <a href="#" className="Treatment-anchor"> +998901249484</a>

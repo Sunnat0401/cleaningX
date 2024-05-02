@@ -32,7 +32,7 @@ function Articles() {
     }
 
     return (
-      <div className='Articles'>
+      <div className='Articles' id="article">
           <div className="container">
                   
           <div className="Articles-top">

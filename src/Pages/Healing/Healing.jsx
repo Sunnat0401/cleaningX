@@ -13,7 +13,7 @@ const Healing = () => {
                        Lobortis mattis odio leo eget mauris met aliquet semper molestie sollicitudin congue massa mauris lectus.
                        </p>
                        <div className="healing-button">
-                    <Button/> <img src={phone} alt=""  className='healing-image'/>
+          <a href="#contact">  <Button/> </a><img src={phone} alt=""  className='healing-image'/>
                     <p className="healing-info">
                         class us now <br />
                         <a href="#" className="healing-anchor"> +998901249484</a>

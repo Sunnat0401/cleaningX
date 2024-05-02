@@ -4,6 +4,7 @@ import Button from '../../Components/Button/Button'
 import './Contact.css'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Example from '../../Components/Modal/Modal'
 const Contact = () => {
   const {t} = useTranslation()
     const [loading , setLoading] = useState(false)
@@ -30,7 +31,7 @@ const SendMessage = ( event) =>{
     }
   }).then((res) => {
     if(name.length > 0 && adress.length > 0 && request.length>0 && phoneNumber.length>0 && email.length>0 && days.length > 0 && addNote.length>0){
-        alert("Muvaffaqiyatli   ✔")
+      <Example/>
          document.getElementById("myForm").reset()
     }else{
         alert("  Malumotni tog'ri kiriting  ❌")
@@ -40,7 +41,7 @@ const SendMessage = ( event) =>{
   }).finally(()=>setLoading(false))
 }
   return (
-    <div className='contact'>
+    <div className='contact' id='contact'>
         <div className="container">
             <div className="contact-left">
                 <h1 className="contact-title">{t("contact1")}</h1>

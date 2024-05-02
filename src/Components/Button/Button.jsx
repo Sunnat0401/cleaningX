@@ -8,7 +8,7 @@ const Button = () => {
     i18n.changeLanguage(selectedLanguage);
   }
   return (
-    <button className="btn">
+    <button className="btn" >
       {t("button")}
     </button>
     )

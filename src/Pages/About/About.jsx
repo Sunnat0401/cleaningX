@@ -33,7 +33,7 @@ function About() {
     }
 
     return (
-      <div className='about'>
+      <div className='about ' id='about'>
           <div className="container">
                   
           <div className="about-title">
@@ -51,7 +51,7 @@ function About() {
          
           </div>
           <div className="about-btns">
-              <Button/>   <OutlineButton/>
+       <a href="#contact">       <Button/></a>   <OutlineButton/>
             </div>
        
           </div>
