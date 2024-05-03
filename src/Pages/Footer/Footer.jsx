@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-connect">
                     <h5 className="footer-subtitle">
-                        Contact us
+                      {t("contact")}
                     </h5>
                     <p className="footer-location">
                     1827 Nickel Road, Los Angeles, CA, 90017, United States
@@ -28,16 +28,16 @@ const Footer = () => {
                 </div>
                 <div className="footer-hours">
                     <h5 className="footer-hour">
-                        Hours
+                        {t("footer3")}
                     </h5>
                     <h5 className="footer-hour">
-                    Monday to Friday
+                  {t(" Monday to Friday")}
                     </h5>
                     <p className="footer-location">
                     6:00 AM - 9:00 PM
                     </p>
                     <h5 className="footer-hour">
-                    Saturday & Sunday
+                    {t("Saturday & Sunday")}
                     </h5>
                     <p className="footer-location">
                     8:00 AM - 8:00 PM
@@ -45,7 +45,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-data">
                 <h5 className="footer-subtitle">
-                Get a free estimate
+              {t("Get a free estimate")}
                     </h5>
                     <p className='footer-phone'><a href="tel(+ 998 ) 90-124-94-84" className="footer-link">(+ 998 ) 90-124-94-84</a></p>
                     <p className="footer-location">
